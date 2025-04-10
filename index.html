@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Google Ads Integration App</title>
+  <title>Marketing Data Integration App</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -28,6 +28,27 @@
       color: #666;
       font-size: 1.1em;
     }
+    .auth-links {
+      margin-top: 30px;
+    }
+    .auth-button {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 24px;
+      font-size: 1em;
+      color: white;
+      background-color: #4285f4;
+      border: none;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+    .auth-button:hover {
+      background-color: #357ae8;
+    }
+    .facebook { background-color: #4267B2; }
+    .pinterest { background-color: #E60023; }
+    .drive { background-color: #0F9D58; }
     .footer {
       margin-top: 40px;
       font-size: 0.9em;
@@ -37,16 +58,21 @@
 </head>
 <body>
   <div class="container">
-    <h1>Google Ads Data Integration App</h1>
+    <h1>Marketing Data Integration App</h1>
     <p>
-      This application enables secure, OAuth-based access to Google Ads data for reporting and analysis.
+      This app connects with platforms like Google Ads, Facebook, Pinterest, and Google Drive to securely access and export your marketing data.
     </p>
     <p>
-      Users can authenticate with their Google account, authorize access to their ad data, and view/export data to destinations like Google Sheets or Google Cloud Storage.
+      It enables OAuth-based login flows to authorize data access and automate reporting into destinations such as Google Sheets.
     </p>
-    <p>
-      Our solution is built using Flask, Airbyte, and Google Ads API, with a strong focus on data security and transparency.
-    </p>
+
+    <div class="auth-links">
+      <a class="auth-button" href="/auth/google-ads">Connect Google Ads</a>
+      <a class="auth-button drive" href="/auth/google-drive">Connect Google Drive</a>
+      <a class="auth-button facebook" href="/auth/facebook">Connect Facebook</a>
+      <a class="auth-button pinterest" href="/auth/pinterest">Connect Pinterest</a>
+    </div>
+
     <div class="footer">
       © 2025 
     </div>
